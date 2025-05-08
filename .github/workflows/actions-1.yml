@@ -8,6 +8,15 @@ jobs:
       - name: Primer Paso
         run: echo "Configurando el entorno de desarrollo..."
 
+      - name: Touch file
+        run: touch config.txt
+      
+      - name: Set file
+        run: echo "Creando archivo de configuración..." > config.txt         
+
+      - name: Verificar file
+        run: echo "Verificando archivo de configuración..." cat config.txt
+
   desarrollo:
     runs-on: ubuntu-latest
     steps:
