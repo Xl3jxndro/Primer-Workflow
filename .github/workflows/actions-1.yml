@@ -19,6 +19,7 @@ jobs:
 
   desarrollo:
     runs-on: ubuntu-latest
+    needs: configuracion
     steps:
       - name: Segundo Paso
         run: ls -al
