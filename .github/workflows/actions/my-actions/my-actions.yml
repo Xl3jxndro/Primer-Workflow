@@ -7,4 +7,5 @@ runs:
   steps:
     - name: first action
       uses: echo "My first action"
+      shell: bash
 
