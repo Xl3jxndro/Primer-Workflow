@@ -1,0 +1,10 @@
+name: my-first-action
+description: My first action
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: first action
+      uses: echo "My first action"
+

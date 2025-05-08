@@ -56,3 +56,13 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+    
+  my-actions:
+    runs-on: ubuntu-latest
+    needs: testing
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Run my action
+        uses: ./.github/actions/my-actions/my-actions.yml # Ruta a tu acción personalizada
