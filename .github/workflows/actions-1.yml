@@ -49,5 +49,5 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.4.0
 
-        -name: node version
+      - name: node version
         run: node -v
