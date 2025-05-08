@@ -66,6 +66,6 @@ jobs:
           uses: actions/checkout@v4.2.2
 
         - name: Run my action
-          run: ./.github/actions/my-action/action.yml # Ruta a la acción personalizada
+          uses: ./.github/actions/my-action # Ruta a la acción personalizada
 
 
