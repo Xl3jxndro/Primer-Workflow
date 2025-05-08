@@ -1,13 +1,5 @@
 name: primer-workflow
-on: [
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
-  workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *' # Cada día a la medianoche
-]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
