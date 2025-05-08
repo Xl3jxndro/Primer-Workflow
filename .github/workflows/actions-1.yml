@@ -70,4 +70,24 @@ jobs:
           with:
             my_input: "Hello from my action!" # Valor del input definido en action.yml
 
+  my-service:
+    runs-on: ubuntu-latest
+    needs: my-actions
 
+    services:
+      mysql:
+        image: mysql:5.7 # Imagen del servicio
+        env:
+          MYSQL_ROOT_PASSWORD: root # Contraseña de root
+          #MYSQL_DATABASE: test_db # Nombre de la base de datos a crear
+        ports:
+          - 3306:3306 # Mapeo de puertos (host:container)
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Wait for MySQL to be ready
+        run: echo "MySQL is ready!" # Aquí puedes agregar un script para verificar que el servicio esté listo
+        
+          
