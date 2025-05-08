@@ -33,3 +33,12 @@ jobs:
 
       - name: LS
         run: ls -al
+
+  testing:
+    runs-on: ubuntu-latest
+    needs: configuracion
+    steps:
+      - name: LS
+        run: |
+          echo "Ejecutando pruebas..." > test.txt
+          cat test.txt
