@@ -1,0 +1,14 @@
+{
+  "name": "primer-workflow",
+  "version": "1.0.0",
+  "description": "Proyecto de ejemplo para GitHub Actions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
