@@ -15,7 +15,7 @@ jobs:
         run: echo "Creando archivo de configuración..." > config.txt         
 
       - name: Verificar file
-        run: cat config.txt echo "Verificando archivo de configuración..." 
+        run: cat config.txt
 
   desarrollo:
     runs-on: ubuntu-latest
