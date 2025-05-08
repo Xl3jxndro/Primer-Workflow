@@ -1,0 +1,84 @@
+# Ejemplo de todas las estructuras de datos permitidas en YAML 1.2
+
+# Escalares
+string: "Hola Mundo"
+integer: 42
+float: 3.1416
+boolean_true: true
+boolean_false: false
+null_value: null
+
+# Secuencia (lista)
+lista_simple:
+  - manzana
+  - banana
+  - naranja
+
+# Secuencia en línea
+lista_inline: [rojo, verde, azul]
+
+# Mapa (diccionario)
+persona:
+  nombre: Juan
+  edad: 30
+  ciudad: Madrid
+
+# Mapa en línea
+persona_inline: {nombre: Ana, edad: 25, ciudad: Lima}
+
+# Secuencia de mapas
+personas:
+  - nombre: Luis
+    edad: 28
+  - nombre: Marta
+    edad: 32
+
+# Mapa de secuencias
+colores_por_tipo:
+  primarios: [rojo, azul, amarillo]
+  secundarios: [verde, naranja, violeta]
+
+# Anidación de estructuras
+empresa:
+  nombre: "Tech S.A."
+  empleados:
+    - nombre: Carlos
+      puesto: Ingeniero
+    - nombre: Laura
+      puesto: Diseñadora
+
+# Alias y anclas
+# Definimos un ancla (&defaults) para reutilizar valores en otras partes del documento.
+defaults: &defaults
+  color: azul
+  tamaño: mediano
+
+camisa:
+  <<: *defaults
+  tipo: polo
+
+# Literales y plegados
+texto_literal: |
+  Esta es una cadena
+  de texto multilínea
+  que conserva saltos de línea.
+
+texto_plegado: >
+  Esta es una cadena
+  de texto multilínea
+  que se pliega en una sola línea.
+
+# Valores explícitos de null
+valor_nulo_explicito: ~
+
+# Booleanos alternativos
+booleano_si: YES
+booleano_no: NO
+
+# Números en diferentes bases
+octal: 0o17
+hexadecimal: 0x1A
+
+# Fecha y hora
+fecha: 2024-06-01
+fecha_hora: 2024-06-01T12:34:56Z
