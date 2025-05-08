@@ -67,5 +67,7 @@ jobs:
 
         - name: Run my action
           uses: ./.github/actions/my-action # Ruta a la acción personalizada
+          with:
+            my_input: "Hello from my action!" # Valor del input definido en action.yml
 
 
