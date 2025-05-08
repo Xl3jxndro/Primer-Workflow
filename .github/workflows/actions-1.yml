@@ -65,7 +65,6 @@ jobs:
         uses: actions/checkout@v4.2.2
 
       - name: Run my action
-        uses: ./.github/workflows/actions/my-actions/firstActions.yml # Ruta a tu acción personalizada
+        uses: ./.github/actions/my-actions # Ruta a la acción personalizada
 
-        
-        
+
