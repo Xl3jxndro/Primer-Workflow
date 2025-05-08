@@ -2,8 +2,14 @@ name: primer-workflow
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  build:
+  configuracion:
     runs-on: ubuntu-latest
     steps:
       - name: Primer Paso
-        run: echo "Deploying to production..."
+        run: echo "Configurando el entorno de desarrollo..."
+
+  desarrollo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Segundo Paso
+        run: ls -al
