@@ -103,6 +103,6 @@ jobs:
 
       - name: Echo variables
         run: |
-          echo "MY_VARIABLE => ${{ MY_ENV }}"
+          echo "MY_VARIABLE => $MY_ENV"
      
           
