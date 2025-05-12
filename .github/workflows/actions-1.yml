@@ -104,5 +104,28 @@ jobs:
       - name: Echo variables
         run: |
           echo "MY_VARIABLE => $MY_ENV"
+
+      - name: Echo step variables
+        env: 
+          MY_STEP_ENV: "Hello from my step variable!" # Variable de entorno para este paso
+        run: |
+          echo "MY_STEP_VARIABLE => $MY_STEP_ENV" # Variable de entorno para este paso
+
+      - name: Echo github variables        
+        run: |
+          echo "NAME_WORKFLOW => ${{ vars.NAME_WORKFLOW }} " # Nombre del workflow
+    
+  my-secrets:
+    runs-on: ubuntu-latest
+    needs: my-variables
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: Echo secrets
+        run: |
+          echo "MY_SECRET => ${{ secrets.MY_SECRET }} " # Secreto definido en GitHub Secrets
+          
      
           
