@@ -1,0 +1,21 @@
+name: "my-first-action"
+description: "My first action"
+
+inputs:
+  my_input:
+    description: "My first input"
+    required: true
+    default: "default value"
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: first action
+      run: echo "My first action"
+      shell: bash
+
+    - name: second action
+      run: echo " ${{ inputs.my_input }} "
+      shell: bash
+
